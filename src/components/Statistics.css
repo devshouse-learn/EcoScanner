@@ -1,0 +1,353 @@
+.statistics-container {
+  width: 100%;
+  max-width: 1000px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.stats-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+  border-radius: 16px;
+  border: 2px solid var(--stats-border);
+}
+
+.stats-header h2 {
+  color: var(--text-primary);
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.stats-subtitle {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: var(--card-bg);
+  border: 2px solid var(--card-border);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  gap: 12px;
+  transition: all 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  border-color: #667eea;
+  box-shadow: 0 8px 16px var(--card-shadow);
+}
+
+.stat-card-primary {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(10, 177, 152, 0.2) 100%);
+  border-color: rgba(16, 185, 129, 0.5);
+}
+
+.stat-card-green {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
+  border-color: rgba(16, 185, 129, 0.5);
+}
+
+.stat-card-red {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(249, 115, 22, 0.2) 100%);
+  border-color: rgba(239, 68, 68, 0.5);
+}
+
+.stat-icon {
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  color: var(--text-primary);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.stat-desc {
+  color: var(--text-secondary);
+  font-size: 11px;
+}
+
+/* Progreso */
+.progress-section {
+  background: var(--card-bg);
+  border: 2px solid var(--card-border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.progress-section h3 {
+  color: var(--text-primary);
+  font-size: 18px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.progress-bar-container {
+  margin-bottom: 12px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 24px;
+  background: var(--progress-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid var(--progress-border);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+  transition: width 0.6s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-text {
+  color: var(--text-secondary);
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Impacto Ambiental */
+.impact-section {
+  background: var(--card-bg);
+  border: 2px solid var(--card-border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.impact-section h3 {
+  color: var(--text-primary);
+  font-size: 18px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.impact-item {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+  border: 2px solid var(--impact-border);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.impact-item:hover {
+  transform: scale(1.05);
+  border-color: #10b981;
+}
+
+.impact-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.impact-label {
+  color: var(--text-secondary);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.impact-value {
+  color: var(--text-primary);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.impact-desc {
+  color: var(--text-secondary);
+  font-size: 10px;
+}
+
+/* Comparación */
+.comparison-section {
+  background: var(--card-bg);
+  border: 2px solid var(--card-border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.comparison-section h3 {
+  color: var(--text-primary);
+  font-size: 18px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.comparison-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.comparison-card {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.comparison-card:hover {
+  border-color: #667eea;
+  transform: scale(1.05);
+}
+
+.comparison-label {
+  color: var(--text-secondary);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.comparison-value {
+  color: var(--text-primary);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Motivación */
+.motivation-section {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
+  border: 2px solid rgba(16, 185, 129, 0.5);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  animation: slideUp 0.5s ease-out;
+}
+
+.motivation-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+  animation: bounce 2s infinite;
+}
+
+.motivation-text {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.motivation-hint {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    flex-direction: row;
+  }
+
+  .stats-header h2 {
+    font-size: 22px;
+  }
+
+  .impact-grid,
+  .comparison-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Variables para tema claro y oscuro */
+:root {
+  --stats-border: rgba(229, 231, 235, 0.5);
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --card-border: rgba(255, 255, 255, 0.2);
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --progress-bg: rgba(0, 0, 0, 0.1);
+  --progress-border: rgba(255, 255, 255, 0.2);
+  --impact-border: rgba(255, 255, 255, 0.2);
+  --text-primary: white;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+}
+
+body.dark-mode {
+  --stats-border: rgba(71, 85, 105, 0.3);
+  --card-bg: rgba(51, 65, 85, 0.6);
+  --card-border: rgba(100, 116, 139, 0.5);
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --progress-bg: rgba(0, 0, 0, 0.3);
+  --progress-border: rgba(100, 116, 139, 0.5);
+  --impact-border: rgba(100, 116, 139, 0.5);
+  --text-primary: #e2e8f0;
+  --text-secondary: #cbd5e1;
+}

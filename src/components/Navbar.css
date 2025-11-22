@@ -1,0 +1,214 @@
+.navbar {
+  background: var(--navbar-bg);
+  border-bottom: 2px solid var(--navbar-border);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px var(--navbar-shadow);
+  transition: all 0.3s ease;
+}
+
+.navbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-emoji {
+  font-size: 28px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 1px;
+}
+
+.navbar-points {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.points-icon {
+  font-size: 18px;
+}
+
+.points-value {
+  font-size: 16px;
+}
+
+.navbar-menu {
+  position: relative;
+}
+
+.menu-toggle {
+  background: var(--button-bg);
+  border: 2px solid var(--button-border);
+  color: var(--text-primary);
+  font-size: 24px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: none;
+}
+
+.menu-toggle:hover {
+  background: var(--button-hover);
+  transform: scale(1.1);
+}
+
+.menu-toggle.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.menu-items {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.menu-item {
+  background: var(--button-bg);
+  border: 2px solid var(--button-border);
+  color: var(--text-primary);
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.menu-item:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+.menu-item.theme-toggle {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.menu-item.theme-toggle:hover {
+  filter: brightness(1.1);
+}
+
+@media (max-width: 1024px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-items {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--navbar-bg);
+    border: 2px solid var(--button-border);
+    border-radius: 8px;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 10px;
+    min-width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    box-shadow: 0 8px 16px var(--navbar-shadow);
+    z-index: 10001;
+  }
+
+  .menu-items.active {
+    max-height: 400px;
+  }
+
+  .menu-item {
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--button-border);
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  .menu-item:last-child {
+    border-bottom: none;
+  }
+
+  .menu-item:hover {
+    background: var(--button-hover);
+    padding-left: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-content {
+    padding: 0 15px;
+  }
+
+  .logo-emoji {
+    font-size: 24px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  .navbar-points {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .points-icon {
+    font-size: 16px;
+  }
+}
+
+/* Variables CSS para tema claro y oscuro */
+:root {
+  --navbar-bg: rgba(255, 255, 255, 0.1);
+  --navbar-border: rgba(255, 255, 255, 0.2);
+  --navbar-shadow: rgba(0, 0, 0, 0.1);
+  --button-bg: rgba(255, 255, 255, 0.15);
+  --button-border: rgba(255, 255, 255, 0.3);
+  --button-hover: rgba(255, 255, 255, 0.25);
+  --text-primary: #ffffff;
+  --primary-color: #667eea;
+}
+
+body.dark-mode {
+  --navbar-bg: rgba(30, 41, 59, 0.95);
+  --navbar-border: rgba(71, 85, 105, 0.3);
+  --navbar-shadow: rgba(0, 0, 0, 0.5);
+  --button-bg: rgba(51, 65, 85, 0.8);
+  --button-border: rgba(100, 116, 139, 0.5);
+  --button-hover: rgba(71, 85, 105, 0.8);
+  --text-primary: #e2e8f0;
+}

@@ -1,0 +1,434 @@
+.product-info-container {
+  width: 100%;
+  max-width: 700px;
+  animation: slideInUp 0.5s ease-out;
+}
+
+.product-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.btn-back {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+  flex: 1;
+}
+
+.btn-back:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: white;
+}
+
+.btn-share-header {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+
+.btn-share-header:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.product-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .product-card {
+  background: rgba(51, 65, 85, 0.9);
+  color: #e2e8f0;
+}
+
+.product-header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+
+body.dark-mode .product-header {
+  border-bottom-color: rgba(100, 116, 139, 0.5);
+}
+
+.product-header h2 {
+  color: #1f2937;
+  font-size: 28px;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .product-header h2 {
+  color: #e2e8f0;
+}
+
+.barcode-display {
+  color: #6b7280;
+  font-size: 14px;
+  font-family: monospace;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .barcode-display {
+  color: #cbd5e1;
+}
+
+/* Sección de reciclabilidad */
+.recyclability-section {
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border-left: 5px solid;
+  transition: all 0.3s ease;
+}
+
+.recyclability-section.recyclable {
+  background: rgba(16, 185, 129, 0.1);
+  border-left-color: #10b981;
+}
+
+body.dark-mode .recyclability-section.recyclable {
+  background: rgba(16, 185, 129, 0.15);
+}
+
+.recyclability-section.non-recyclable {
+  background: rgba(239, 68, 68, 0.1);
+  border-left-color: #ef4444;
+}
+
+body.dark-mode .recyclability-section.non-recyclable {
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.recyclability-section h3 {
+  color: #1f2937;
+  margin-bottom: 12px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .recyclability-section h3 {
+  color: #e2e8f0;
+}
+
+.recyclability-status {
+  margin-bottom: 12px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.badge-yes {
+  background: #10b981;
+  color: white;
+}
+
+.badge-no {
+  background: #ef4444;
+  color: white;
+}
+
+.recyclable-note {
+  color: #10b981;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Secciones de información */
+.info-section {
+  margin-bottom: 25px;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .info-section {
+  background: rgba(51, 65, 85, 0.5);
+}
+
+.info-section h3 {
+  color: #1f2937;
+  font-size: 18px;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .info-section h3 {
+  color: #e2e8f0;
+}
+
+/* Materiales */
+.materials-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.material-tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Pasos de reciclaje */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.step {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step p {
+  color: #374151;
+  line-height: 1.6;
+  margin-top: 5px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .step p {
+  color: #cbd5e1;
+}
+
+/* Ubicaciones */
+.locations {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.location {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .location {
+  background: rgba(51, 65, 85, 0.5);
+  border-color: rgba(100, 116, 139, 0.3);
+}
+
+.location-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.location-info {
+  flex: 1;
+}
+
+.location-name {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .location-name {
+  color: #e2e8f0;
+}
+
+.location-desc {
+  color: #6b7280;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .location-desc {
+  color: #cbd5e1;
+}
+
+/* Impacto ambiental */
+.environmental-impact {
+  color: #374151;
+  line-height: 1.8;
+  background: rgba(16, 185, 129, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #10b981;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .environmental-impact {
+  color: #cbd5e1;
+  background: rgba(16, 185, 129, 0.15);
+}
+
+/* Lista de consejos */
+.tips-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tips-list li {
+  padding: 10px;
+  margin-bottom: 8px;
+  background: white;
+  border-left: 4px solid #667eea;
+  padding-left: 15px;
+  color: #374151;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .tips-list li {
+  background: rgba(51, 65, 85, 0.5);
+  color: #cbd5e1;
+}
+
+.tips-list li:before {
+  content: '✓ ';
+  color: #667eea;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+/* Botones generales */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+.btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+.btn-success {
+  background: #10b981;
+  color: white;
+}
+
+.btn-success:hover {
+  background: #059669;
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #dc2626;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    padding: 20px;
+  }
+
+  .product-header h2 {
+    font-size: 22px;
+  }
+
+  .info-section {
+    padding: 15px;
+  }
+
+  .info-section h3 {
+    font-size: 16px;
+  }
+
+  .step {
+    gap: 12px;
+  }
+
+  .step-number {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .location {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .material-tag {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+}
