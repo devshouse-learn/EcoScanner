@@ -66,6 +66,12 @@ function Navbar({ onNavigate }) {
               🎯 Desafíos
             </button>
             <button
+              className="menu-item"
+              onClick={() => handleMenuClick('settings')}
+            >
+              ⚙️ Configuración
+            </button>
+            <button
               className="menu-item theme-toggle"
               onClick={toggleTheme}
             >

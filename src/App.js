@@ -10,6 +10,7 @@ import Gallery from './components/Gallery';
 import History from './components/History';
 import Statistics from './components/Statistics';
 import Challenges from './components/Challenges';
+import Settings from './components/Settings';
 import ShareModal from './components/ShareModal';
 import { useTheme } from './context/ThemeContext';
 import { useAppData } from './context/AppDataContext';
@@ -85,6 +86,8 @@ function App() {
         return <Statistics onBack={() => setCurrentSection('scanner')} />;
       case 'challenges':
         return <Challenges onBack={() => setCurrentSection('scanner')} />;
+      case 'settings':
+        return <Settings onBack={() => setCurrentSection('scanner')} />;
       case 'scanner':
       default:
         return (
